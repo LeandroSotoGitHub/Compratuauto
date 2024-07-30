@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    
     <title>Compramos tu auto</title>
   </head>
   <body>
@@ -36,7 +37,7 @@
       </nav>
       <div class="section__container header__container" id="home">
         <div class="header__content">
-          <h1>Compramos tu auto</h1>
+          <h1>Compramos tu <span id="element"></span></h1>
           <div class="header__btn">
             <button class="btn">Contactános</button>
           </div>
@@ -55,7 +56,22 @@
         <img src="assets/banner.jpg" alt="banner" />
       </div>
     </section> -->
-
+    
+    <section class="experience__container" id="about">
+      <div class="experience__image">
+        <img src="assets/experience.jpg" alt="experience" />
+      </div>
+      <div class="experience__content">
+        <p class="section__subheader">QUÉ COMPRAMOS...</p>
+        <h2 class="section__header">
+          Compramos Sanos y Chocados
+        </h2>
+        <p class="section__description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro beatae impedit eveniet repellat molestias praesentium quasi fuga, laboriosam ea aliquid quam ullam sapiente atque totam, delectus earum iure ipsa consectetur.
+        </p>
+        <button class="btn">Contácto</button>
+      </div>
+    </section>
 
     <section class="section__container price__container" id="price">
       <p class="section__subheader">Experiencia sobre todo</p>
@@ -130,24 +146,24 @@
         </div>
       </div>
     </section> -->
-
-
     
-    <section class="experience__container" id="about">
-      <div class="experience__image">
-        <img src="assets/experience.jpg" alt="experience" />
-      </div>
-      <div class="experience__content">
-        <p class="section__subheader">CONFIANZA</p>
-        <h2 class="section__header">
-          Compramos Sanos y Chocados
-        </h2>
-        <p class="section__description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro beatae impedit eveniet repellat molestias praesentium quasi fuga, laboriosam ea aliquid quam ullam sapiente atque totam, delectus earum iure ipsa consectetur.
-        </p>
-        <button class="btn">Contácto</button>
+    <section class="contact">
+      <div class="section__container contact__container">
+        <div class="contact__content">
+          <p class="section__subheader">CONTÁCTANOS</p>
+          <h2 class="section__header">Compra eso que tanto buscas</h2>
+          <p class="section__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit consequuntur corporis suscipit maxime facilis dicta nostrum iusto vero modi non totam quidem qui sapiente vel molestias, temporibus repellendus. Tempore, voluptate.
+          </p>
+          <div class="contact__btns">
+            <button class="btn">Nuestro proceso</button>
+            <button class="btn">Contácto</button>
+          </div>
+        </div>
       </div>
     </section>
+    
+    
 
     <section class="service" id="service">
       <div class="section__container service__container">
@@ -191,21 +207,6 @@
 
 
 
-    <section class="contact">
-      <div class="section__container contact__container">
-        <div class="contact__content">
-          <p class="section__subheader">CONTÁCTANOS</p>
-          <h2 class="section__header">Compra eso que tanto buscas</h2>
-          <p class="section__description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit consequuntur corporis suscipit maxime facilis dicta nostrum iusto vero modi non totam quidem qui sapiente vel molestias, temporibus repellendus. Tempore, voluptate.
-          </p>
-          <div class="contact__btns">
-            <button class="btn">Nuestro proceso</button>
-            <button class="btn">Contácto</button>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="section__container testimonial__container" id="client">
       <p class="section__subheader">TESTIMONIOS DE CLIENTES</p>
@@ -310,6 +311,14 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+      strings: ['auto', 'utilitario', 'camioneta', 'camion', 'moto','pick up'],
+      typeSpeed: 100,
+      loop: true,
+    });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
