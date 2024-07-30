@@ -17,9 +17,6 @@
   box-sizing: border-box;
 }
 
-#element{
-  color: var(--primary-color)
-}
 
 .section__container {
   max-width: var(--max-width);
@@ -193,11 +190,30 @@ nav {
 }
 
 .experience__container {
-  /* max-width: var(--max-width); */
   background-color: var(--secondary-color);
-  display: grid;
-  gap: 2rem;
-  padding: 5rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px 20px;
+
+  height: fit-content;
+}
+
+
+.swiper-container1{
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  margin: 20px;
+  margin-right: 50px;
+  overflow: hidden;
+}
+
+.chocados img {
+  width: 100%;
+  height: 300px;
+  /* margin: 10px; */
 }
 
 .experience__container .section__header{
@@ -208,10 +224,10 @@ nav {
   color: #d9d9d9;
 }
 
-.experience__image img {
-  max-width: 500px;
-  margin: auto;
+.experience__content{
+  margin-right: 20px;
 }
+
 
 .service {
   background-color: var(--extra-light);
@@ -522,6 +538,11 @@ nav {
   text-align: center;
 }
 
+#element{
+  color: var(--primary-color);
+}
+
+
 @media (width > 480px) {
   .header__content h1 {
     font-size: 4rem;
@@ -601,10 +622,10 @@ nav {
     grid-column: 3/5;
   }
 
-  .experience__container {
+  /* .experience__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-  }
+  } */
 
   .service__grid {
     grid-template-columns: repeat(4, 1fr);
@@ -644,5 +665,17 @@ nav {
 @media (width > 1024px) {
   .price__grid {
     gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience__image {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }

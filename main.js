@@ -33,6 +33,15 @@ ScrollReveal().reveal(".header__btn", {
   delay: 500,
 });
 
+ScrollReveal().reveal(".swiper-container", {
+  ...scrollRevealOptions,
+});
+
+
+ScrollReveal().reveal(".experience__content", {
+  ...scrollRevealOptions,
+});
+
 // service container
 ScrollReveal().reveal(".service__card", {
   ...scrollRevealOptions,
@@ -50,4 +59,20 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+});
+
+
+var swiper1 = new Swiper('.swiper-container1', {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: false,
 });
