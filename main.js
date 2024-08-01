@@ -58,6 +58,7 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
+    clickeable: true,
   },
 });
 
@@ -70,9 +71,5 @@ var swiper1 = new Swiper('.swiper-container1', {
   },
   slidesPerView: 1,
   spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
   navigation: false,
 });
