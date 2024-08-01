@@ -65,7 +65,7 @@
       </div>
     </header>
 
-    <section class="experience__container" id="about">
+    <section class="experience__container" id="compra">
       <div class="swiper-container1">
         <div class="swiper-wrapper">
           <div class="swiper-slide chocados"><img src="assets/image3.png" alt="Imagen 1"></div>
@@ -81,7 +81,7 @@
           Compramos autos usados, chocados, utilitarios, camionetas, 4x4, autos antiguos de 2006 en adelante.
           <br>En el estado que se encuentre, funcionen o no, con infracciones, deudas de patentes.
         </p>
-        <button class="btn">Contácto</button>
+        <a class="btn">Contácto</a>
       </div>
     </section>
 
@@ -257,9 +257,36 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="modal-container">
+        <button class="btn" id="openModalBtn">Dejá tu opinión</button>
 
+        <div id="opinionModal" class="modal">
+          <div class="modal-content">
+              <span id="closeModalBtn" class="close">&times;</span>
+              <div id="formContainer">
+                  <h2>Deja tu Opinión</h2>
+                  <form id="opinionForm">
+                      <label for="name">Nombre:</label>
+                      <input type="text" id="name" name="name" required>
+  
+                      <label for="opinion">Opinión:</label>
+                      <textarea id="opinion" name="opinion" required></textarea>
+  
+                      <button class="btn" type="submit">Enviar</button>
+                  </form>
+              </div>
+              <div id="successMessage" class="success-message" style="display: none;">
+                  <h2>¡Gracias por tu opinión!</h2>
+                  <p>Tu opinión ha sido recibida exitosamente.</p>
+                  <button class="btn"  id="closeSuccessBtn">Cerrar</button>
+              </div>
+          </div>
+      </div>
+      </div>
       </div>
     </section>
+
+
+
 
     <footer class="footer">
       <div class="section__container footer__container">

@@ -73,3 +73,40 @@ var swiper1 = new Swiper('.swiper-container1', {
   spaceBetween: 10,
   navigation: false,
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const openModalBtn = document.getElementById('openModalBtn');
+  const modal = document.getElementById('opinionModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const formContainer = document.getElementById('formContainer');
+  const successMessage = document.getElementById('successMessage');
+  const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+  const opinionForm = document.getElementById('opinionForm');
+
+  openModalBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+      formContainer.style.display = 'block';
+      successMessage.style.display = 'none';
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
+
+  closeSuccessBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = 'none';
+      }
+  });
+
+  opinionForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      formContainer.style.display = 'none';
+      successMessage.style.display = 'block';
+  });
+});
